@@ -1,67 +1,265 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gửi Mẹ Yêu ❤️</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe1e9, #fff4e8, #ffd4e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 25px;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    background: rgba(255,255,255,0.88);
+    border-radius: 28px;
+    padding: 42px 30px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(218,65,113,.18);
+    position: relative;
+    z-index: 2;
+    animation: appear 1.3s ease;
+}
+
+.flower {
+    font-size: 75px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    color: #df477c;
+    font-size: 34px;
+    margin: 20px 0 12px;
+}
+
+.subtitle {
+    color: #a95d79;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.message {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #68515c;
+}
+
+.highlight {
+    color: #e04479;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 28px;
+    background: linear-gradient(120deg, #ff6797, #e93c77);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 6px 20px #ff9bb8;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+.letter {
+    display: none;
+    margin-top: 28px;
+    padding: 25px;
+    background: #fff0f5;
+    border-radius: 18px;
+    border: 1px solid #ffc1d5;
+    line-height: 1.9;
+    color: #854c66;
+    animation: appear .8s ease;
+}
+
+.signature {
+    margin-top: 20px;
+    color: #e04479;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 1;
+    animation: rise linear forwards;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 27px; }
+    .card { padding: 30px 20px; }
+    .message { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
 <div class="card">
     <div class="flower">💐</div>
 
-    <h1>Gửi Chị Yêu ❤️</h1>
+    <h1>Gửi Mẹ Yêu Của Con ❤️</h1>
 
     <p class="subtitle">
         Chúc mừng ngày Phụ nữ Việt Nam 20/10
     </p>
 
     <div class="message">
-        Nhân ngày 20/10, em chúc chị luôn
-        mạnh khỏe, vui vẻ và hạnh phúc.
+        Mẹ yêu ơi! 🌷<br><br>
+
+        Nhân ngày 20/10, con muốn gửi đến mẹ
+        những lời chúc tốt đẹp nhất.
+
         <br><br>
 
-        Chúc chị luôn có thật nhiều năng lượng,
-        niềm vui và sự kiên nhẫn để đồng hành
-        cùng các bạn học sinh nhỏ mỗi ngày.
+        Cảm ơn mẹ vì đã luôn yêu thương,
+        chăm sóc và hy sinh cho con.
+
         <br><br>
 
-        Mong rằng công việc giảng dạy của chị
-        luôn thuận lợi, gặp được những học trò
-        ngoan ngoãn, đáng yêu và có thật nhiều
-        kỷ niệm đẹp dưới mái trường.
+        Con mong mẹ luôn
+        <span class="highlight">
+            mạnh khỏe, hạnh phúc và bình an.
+        </span>
+
         <br><br>
 
-        <strong>
-            Chúc chị ngày 20/10 thật vui vẻ! ❤️
-        </strong>
+        Dù con có lớn đến đâu,
+        mẹ vẫn mãi là người phụ nữ
+        tuyệt vời nhất trong lòng con. 💖
     </div>
 
     <button onclick="openLetter()">
-        💌 Chị bấm vào đây nhé!
+        💌 Mẹ ơi, bấm vào đây nhé!
     </button>
 
     <div class="letter" id="letter">
-        <h2>Gửi chị ❤️</h2>
-
-        <p>
-            Em biết công việc giáo viên tiểu học
-            không hề dễ dàng, ngày nào cũng phải
-            chăm lo và dạy dỗ các bạn nhỏ.
-        </p>
+        <h2>💗 Điều con muốn nói...</h2>
         <br>
 
-        <p>
-            Em mong chị luôn giữ được niềm vui
-            và sự yêu thích với nghề giáo.
-            Đừng làm việc quá sức và nhớ dành
-            thời gian chăm sóc bản thân nữa nhé.
-        </p>
-        <br>
+        Mẹ à,<br><br>
 
-        <p>
-            Chúc chị ngày càng thành công trong
-            công việc, luôn xinh đẹp, hạnh phúc
-            và gặp nhiều điều may mắn.
-        </p>
+        Có những điều con không thường xuyên
+        nói ra, nhưng con luôn biết ơn vì
+        được làm con của mẹ.
+
+        <br><br>
+
+        Cảm ơn mẹ đã dành cả thanh xuân
+        để chăm lo cho gia đình.
+
+        <br><br>
+
+        Con biết đôi khi con còn vô tâm,
+        chưa thể hiện hết tình cảm của mình.
+
+        <br><br>
+
+        Nhưng con muốn mẹ biết rằng:
+        <strong>Con yêu mẹ rất nhiều!</strong>
+
+        <br><br>
+
+        Con sẽ cố gắng trưởng thành hơn
+        để mẹ luôn tự hào về con.
 
         <div class="signature">
-            Chúc chị 20/10 vui vẻ! 💕
-            <br>
-            Em của chị ❤️
-            Minh Anh
+            Mãi yêu mẹ! ❤️<br>
+            Con của mẹ 💕
         </div>
     </div>
 </div>
+
+<script>
+function openLetter() {
+    const letter = document.getElementById("letter");
+    const button = document.querySelector("button");
+
+    letter.style.display = "block";
+    button.style.display = "none";
+
+    letter.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+    for (let i = 0; i < 30; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+
+    const hearts = ["❤️", "💗", "💕", "🌸", "💖"];
+    heart.innerText = hearts[
+        Math.floor(Math.random() * hearts.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    const duration = 4 + Math.random() * 4;
+    heart.style.animationDuration = duration + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), duration * 1000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
